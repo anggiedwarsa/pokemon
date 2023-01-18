@@ -1,0 +1,23 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    avoid_print: false
+    prefer_single_quotes: true
+    use_key_in_widget_constructors: false
+    prefer_const_constructors: false
+    unnecessary_string_interpolations: false
+    constant_identifier_names: false
+    avoid_renaming_method_parameters: false
+    prefer_typing_uninitialized_variables: false
+    prefer_const_declarations: false
+    prefer_const_constructors_in_immutables: false
+    prefer_null_aware_operators: false
+    prefer_const_literals_to_create_immutables: false
+    prefer_is_not_operator: false
+    avoid_function_literals_in_foreach_calls: false
+    sized_box_for_whitespace: false
+    implementation_imports: false
+    control_flow_in_finally: false
+    avoid_bool_literals_in_conditional_expressions: true
+    unnecessary_overrides: false
