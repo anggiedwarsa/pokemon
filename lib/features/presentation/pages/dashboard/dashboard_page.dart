@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
-import 'package:pokemon/config/flavor_config.dart';
 import 'package:pokemon/core/util/string_extension.dart';
 import 'package:pokemon/core/util/styles/colors.dart';
+import 'package:pokemon/features/data/models/pokemon/detail_pokemon_response.dart';
 import 'package:pokemon/features/data/models/result/result_response.dart';
 import 'package:pokemon/features/presentation/bloc/list_pokemons/list_pokemons_bloc.dart';
 import 'package:pokemon/features/presentation/pages/dashboard/widgets/widget_detail_pokemon.dart';
+import 'package:pokemon/features/presentation/pages/pokemon/detail/detail_pokemon_page.dart';
 import 'package:pokemon/features/presentation/widgets/widget_center_try_again.dart';
 import 'package:pokemon/features/presentation/widgets/widget_load_more_try_again.dart';
 import 'package:pokemon/features/presentation/widgets/widget_loading_center.dart';
@@ -91,13 +92,25 @@ class _DashboardPageState extends State<DashboardPage> {
                     itemBuilder: (context, item, index) {
                       return InkWell(
                         onTap: () async {
-                          await showModalBottomSheet(
+                          final result = await showModalBottomSheet(
                             context: context,
                             backgroundColor: Colors.transparent,
                             builder: (context) => WidgetDetailPokemon(
                               name: item?.name ?? '',
                             ),
-                          );
+                          ) as DetailPokemonResponse?;
+                          if (result != null) {
+                            if (!mounted) {
+                              return;
+                            }
+                            await Navigator.pushNamed(
+                              context,
+                              DetailPokemonPage.routeName,
+                              arguments: {
+                                'pokemon': result,
+                              },
+                            );
+                          }
                         },
                         child: Container(
                           decoration: BoxDecoration(

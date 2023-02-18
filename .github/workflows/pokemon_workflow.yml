@@ -7,9 +7,9 @@ name: pokemon
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build:
@@ -17,34 +17,34 @@ jobs:
 
     steps:
       - name: Checkout the code
-      - uses: actions/checkout@v3
-      
+        uses: actions/checkout@v3
+
       - name: Install and set Flutter version
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.7.0'
-          channel: 'stable'
-      
+          flutter-version: "3.7.0"
+          channel: "stable"
+
       - name: Flutter doctor
         run: flutter doctor -v
-        
+
       - name: Get flutter packages
         run: flutter pub get
-      
+
       - name: Running Build Runner
         run: flutter pub run build_runner build --delete-conflicting-outputs
-        
+
       - name: Analize dart
         run: dart analyze analysis_options.yaml .
-        
+
       - name: Running Test
         run: flutter test --coverage
-        
+
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
-        
+
       - name: Build apk
         run: flutter build apk
-        
+
       - name: Build appbundle
         run: flutter build appbundle

@@ -32,7 +32,7 @@ class WidgetCenterTryAgain extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Text(
                 isConnectionError ? 'connection_lost'.tr() : 'oh_no'.tr(),
-                style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                style: Theme.of(context).textTheme.titleMedium?.copyWith(
                       color: Colors.grey,
                       fontWeight: FontWeight.w500,
                     ),
@@ -46,7 +46,7 @@ class WidgetCenterTryAgain extends StatelessWidget {
                 textAlign: TextAlign.center,
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
-                style: Theme.of(context).textTheme.caption,
+                style: Theme.of(context).textTheme.bodySmall,
               ),
             ),
             SizedBox(height: 16),
@@ -67,7 +67,7 @@ class WidgetCenterTryAgain extends StatelessWidget {
                   ),
                   Text(
                     'try_again'.tr(),
-                    style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
                           color: Colors.white,
                         ),
                   ),

@@ -1,15 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pokemon/core/util/styles/colors.dart';
 
-/// Widget ini berfungsi untuk membuat widget [ElevatedButton] dengan style primary button.<br /><br />
-///
-/// [onPressed] - fungsi yang dijalankan ketika widget [ElevatedButton] di-tap<br />
-/// [child] - widget yang ditampilkan didalam widget [ElevatedButton]. Umumnya pakai widget [Text].<br />
-/// [textColor] - warna dari teks widget [ElevatedButton].<br />
-/// [focusNode] - focus node untuk widget [WidgetElevatedButtonPrimary].<br />
-/// [backgroundColor] - warna background dari widget [ElevatedButton].<br />
-/// [height] - tinggi dari widget [ElevatedButton].
-/// [borderSide] - sisi border dari widget [ElevatedButton].
 class WidgetPrimaryButton extends StatelessWidget {
   final Function()? onPressed;
   final Widget child;

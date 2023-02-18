@@ -25,6 +25,6 @@ class ResultResponse extends Equatable {
 
   @override
   String toString() {
-    return super.toString();
+    return 'ResultResponse{name: $name, url: $url}';
   }
 }

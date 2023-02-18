@@ -3,79 +3,79 @@ import 'package:flutter/material.dart';
 class BaseTextStyle {
   /// Guideline typografi berdasarkan Material Design type system
   /// https://material.io/design/typography/the-type-system.html#type-scale
-  static final TextTheme textThemeBak = const TextTheme(
-    headline1: TextStyle(
+  static final TextTheme textThemeBak = TextTheme(
+    displayLarge: TextStyle(
       fontSize: 96,
       fontWeight: FontWeight.w300,
       letterSpacing: -1.5,
       height: 1.37,
     ),
-    headline2: TextStyle(
+    displayMedium: TextStyle(
       fontSize: 60,
       fontWeight: FontWeight.w300,
       letterSpacing: -0.5,
       height: 1.46,
     ),
-    headline3: TextStyle(
+    displaySmall: TextStyle(
       fontSize: 48,
       fontWeight: FontWeight.w400,
       height: 1.41,
       letterSpacing: 0.0,
     ),
-    headline4: TextStyle(
+    headlineMedium: TextStyle(
       fontSize: 34,
       fontWeight: FontWeight.w400,
       letterSpacing: 0.25,
       height: 1.18,
     ),
-    headline5: TextStyle(
+    headlineSmall: TextStyle(
       fontSize: 24,
       fontWeight: FontWeight.w400,
       letterSpacing: 0.0,
       height: 1.33,
     ),
-    headline6: TextStyle(
+    titleLarge: TextStyle(
       fontSize: 20,
       fontWeight: FontWeight.w500,
       letterSpacing: 0.15,
       height: 1.38,
     ),
-    subtitle1: TextStyle(
+    titleMedium: TextStyle(
       fontSize: 16,
       fontWeight: FontWeight.w400,
       letterSpacing: 0.15,
     ),
-    subtitle2: TextStyle(
+    titleSmall: TextStyle(
       fontSize: 14,
       fontWeight: FontWeight.w500,
       letterSpacing: 0.1,
     ),
-    bodyText1: TextStyle(
+    bodyLarge: TextStyle(
       fontSize: 16,
       fontWeight: FontWeight.w400,
       letterSpacing: 0.5,
       height: 1.5,
     ),
-    bodyText2: TextStyle(
+    bodyMedium: TextStyle(
       fontSize: 14,
       fontWeight: FontWeight.w400,
       letterSpacing: 0.04,
       height: 1.45,
     ),
-    button: TextStyle(
+    labelLarge: TextStyle(
       fontSize: 14,
       fontWeight: FontWeight.w500,
       letterSpacing: 1.25,
       height: 1.4,
     ),
-    caption: TextStyle(
+    bodySmall: TextStyle(
       fontSize: 12,
       fontWeight: FontWeight.w400,
       letterSpacing: 0.4,
       height: 1.35,
       color: Color(0xFF919498),
     ),
-    overline: TextStyle(
+    labelSmall: TextStyle(
       fontSize: 10,
       fontWeight: FontWeight.w500,
       letterSpacing: 0.24,

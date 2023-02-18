@@ -4,7 +4,6 @@ import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:pokemon/core/service/network_info.dart';
 import 'package:pokemon/core/util/dio_logging_interceptor.dart';
-import 'package:pokemon/core/util/helper.dart';
 import 'package:pokemon/core/util/shared_preferences_manager.dart';
 import 'package:pokemon/features/data/data_sources/pokemons_remote_data_sources.dart';
 import 'package:pokemon/features/data/repositories/pokemons/pokemons_repository_impl.dart';
@@ -79,10 +78,6 @@ Future<void> init() async {
   });
 
   sl.registerLazySingleton(() => Connectivity());
-  sl.registerLazySingleton(
-    () => Helper(sharedPreferencesManager: sl()),
-  );
-
   sl.registerLazySingleton(() => DeviceInfoPlugin());
 
   // dao

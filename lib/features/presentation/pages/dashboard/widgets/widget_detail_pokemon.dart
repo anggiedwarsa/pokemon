@@ -137,7 +137,7 @@ class _WidgetDetailPokemonState extends State<WidgetDetailPokemon> {
                     ),
                     WidgetPrimaryButton(
                       onPressed: () {
-                        Navigator.pop(context, pokemon.name);
+                        Navigator.pop(context, pokemon);
                       },
                       child: Padding(
                         padding: const EdgeInsets.symmetric(

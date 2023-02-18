@@ -16,7 +16,7 @@ DetailPokemonResponse _$DetailPokemonResponseFromJson(
       forms: (json['forms'] as List<dynamic>?)
           ?.map((e) => Species.fromJson(e as Map<String, dynamic>))
           .toList(),
-      gameIndices: (json['game_indicates'] as List<dynamic>?)
+      gameIndices: (json['game_indices'] as List<dynamic>?)
           ?.map((e) => GameIndex.fromJson(e as Map<String, dynamic>))
           .toList(),
       height: json['height'] as int?,
@@ -51,7 +51,7 @@ Map<String, dynamic> _$DetailPokemonResponseToJson(
       'abilities': instance.abilities?.map((e) => e.toJson()).toList(),
       'base_experience': instance.baseExperience,
       'forms': instance.forms?.map((e) => e.toJson()).toList(),
-      'game_indicates': instance.gameIndices?.map((e) => e.toJson()).toList(),
+      'game_indices': instance.gameIndices?.map((e) => e.toJson()).toList(),
       'height': instance.height,
       'held_items': instance.heldItems,
       'id': instance.id,

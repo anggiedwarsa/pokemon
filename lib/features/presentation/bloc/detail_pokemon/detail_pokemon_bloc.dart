@@ -22,7 +22,6 @@ class DetailPokemonBloc extends Bloc<DetailPokemonEvent, DetailPokemonState> {
     LoadDetailPokemonEvent event,
     Emitter<DetailPokemonState> emit,
   ) async {
-    emit(DetailPokemonInitial());
     emit(DetailPokemonLoadingState());
 
     var resultDetailPokemon = await getDetailPokemon(ParamsGetDetailPokemon(

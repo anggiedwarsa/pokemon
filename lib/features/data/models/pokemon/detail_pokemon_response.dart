@@ -13,7 +13,7 @@ class DetailPokemonResponse extends Equatable {
   final int? baseExperience;
   @JsonKey(name: 'forms')
   final List<Species>? forms;
-  @JsonKey(name: 'game_indicates')
+  @JsonKey(name: 'game_indices')
   final List<GameIndex>? gameIndices;
   @JsonKey(name: 'height')
   final int? height;
@@ -887,7 +887,9 @@ class Stat extends Equatable {
   explicitToJson: true,
 )
 class Type extends Equatable {
+  @JsonKey(name: 'slot')
   final int? slot;
+  @JsonKey(name: 'type')
   final Species? type;
 
   Type({

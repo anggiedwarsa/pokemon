@@ -7,9 +7,6 @@ class SharedPreferencesManager {
   static const keyLanguageIndonesia = 'indonesia';
   static const keyLanguageEnglishCode = 'en';
   static const keyLanguageIndonesiaCode = 'id';
-  static const keyFcmToken = 'fcmToken';
-  static const keyIdentificationDevice = 'identificationDevice';
-  static const keyRecentSearch = 'recentSearch';
 
   SharedPreferencesManager();
 
