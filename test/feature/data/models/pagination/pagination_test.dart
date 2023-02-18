@@ -40,7 +40,7 @@ void main() {
     );
 
     test(
-      'pastikan fungsi fromJson bisa mengembalikan objek class model ActivityResponse',
+      'make sure fromJson function return actual model',
       () async {
         // act
         final actualModel = DataPage<ResultResponse>.fromJson(jsonData, ResultResponse.fromJson);

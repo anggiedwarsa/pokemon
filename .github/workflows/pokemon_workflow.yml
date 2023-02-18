@@ -42,9 +42,3 @@ jobs:
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
-
-      - name: Build apk
-        run: flutter build apk
-
-      - name: Build appbundle
-        run: flutter build appbundle
