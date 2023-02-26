@@ -51,7 +51,7 @@ class _WidgetDetailPokemonState extends State<WidgetDetailPokemon> {
         ),
       ),
       padding: EdgeInsets.all(16),
-      child: BlocProvider(
+      child: BlocProvider<DetailPokemonBloc>(
         create: (context) => _detailPokemonBloc,
         child: BlocBuilder<DetailPokemonBloc, DetailPokemonState>(
           builder: (context, state) {
